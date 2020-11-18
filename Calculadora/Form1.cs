@@ -19,9 +19,11 @@ namespace Calculadora
 
         double num1, num2;
         string operación;
+        
 
         private void MiMetodo_Click(object sender, EventArgs e)
         {
+            double resultado;
             string textoboton = ((Button)sender).Text;
      
             switch(textoboton)
@@ -32,7 +34,7 @@ namespace Calculadora
                         return;
                     }
                     num1 = double.Parse(lblnumeros.Text);
-                    double resultado = Math.Sqrt(num1);
+                    resultado = Math.Sqrt(num1);
                     lblnumeros.Text = resultado+"";
                     break;
                 case "sin":
@@ -41,8 +43,8 @@ namespace Calculadora
                         return;
                     }
                     num1 = double.Parse(lblnumeros.Text);
-                    double resultado1 = Math.Sin(num1);
-                    lblnumeros.Text = resultado1 + "";
+                    resultado = Math.Sin(num1);
+                    lblnumeros.Text = resultado + "";
                     break;
                 case "cos":
                     if (lblnumeros.Text == "")
@@ -50,8 +52,8 @@ namespace Calculadora
                         return;
                     }
                     num1 = double.Parse(lblnumeros.Text);
-                    double resultado2 = Math.Cos(num1);
-                    lblnumeros.Text = resultado2 + "";
+                    resultado = Math.Cos(num1);
+                    lblnumeros.Text = resultado + "";
                     break;
                 case "tan":
                     if (lblnumeros.Text == "")
@@ -59,8 +61,8 @@ namespace Calculadora
                         return;
                     }
                     num1 = double.Parse(lblnumeros.Text);
-                    double resultado3 = Math.Tan(num1);
-                    lblnumeros.Text = resultado3 + "";
+                    resultado = Math.Tan(num1);
+                    lblnumeros.Text = resultado + "";
                     break;
                 case "log":
                     if (lblnumeros.Text == "")
@@ -68,8 +70,8 @@ namespace Calculadora
                         return;
                     }
                     num1 = double.Parse(lblnumeros.Text);
-                    double resultado4 = Math.Log(num1);
-                    lblnumeros.Text = resultado4 + "";
+                    resultado = Math.Log(num1);
+                    lblnumeros.Text = resultado + "";
                     break;
                 case "Abs":
                     if (lblnumeros.Text == "")
@@ -77,8 +79,8 @@ namespace Calculadora
                         return;
                     }
                     num1 = double.Parse(lblnumeros.Text);
-                    double resultado5 = Math.Abs(num1);
-                    lblnumeros.Text = resultado5 + "";
+                    resultado = Math.Abs(num1);
+                    lblnumeros.Text = resultado + "";
                     break;
 
                 case "+":
